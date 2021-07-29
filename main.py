@@ -10,8 +10,12 @@ import bankclient
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     acc = account.Account(1000)
-    print(acc.get_balance())
-    client = bankclient.BankClient('John')
-    print(client.get_name())
-    print(client.get_balance())
+
+    print(acc.balance)
+    acc.balance = 2000
+    print(acc.balance)
+    acc.balance = -2000
+    print(acc.balance)
+
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

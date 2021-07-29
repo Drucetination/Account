@@ -20,10 +20,12 @@ class Account:
         else:
             print('You can\'t put negative amount of money into your account')
 
-    def get_balance(self):
+    @property
+    def balance(self):
         return self.__balance
 
-    def set_balance(self, amount):
+    @balance.setter
+    def balance(self, amount):
         if amount >= 0:
             self.__balance = amount
         else:
